@@ -1,0 +1,72 @@
+.genre-selection-container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffe4f0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-height: 90vh; /* ограничим высоту контейнера */
+  overflow: hidden; /* чтобы не было двойной прокрутки */
+  display: flex;
+  flex-direction: column;
+}
+
+.genre-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.genre-list {
+  flex: 1;
+  overflow-y: auto; /* вертикальная прокрутка */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-right: 10px; /* немного отступа для скроллбара */
+  max-height: 50vh; /* можно подстроить */
+}
+
+.genre-item {
+  font-size: 18px;
+  margin: 8px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* чтобы кнопка всегда была внизу */
+}
+
+.submit-button:hover {
+  background-color: #ff4081;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.genre-item {
+  font-size: 18px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center; /* выравнивание по центру по вертикали */
+  gap: 10px;
+}
+
+.genre-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0; /* чтобы не сжимался при длинном тексте */
+}
